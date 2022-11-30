@@ -7,10 +7,13 @@ class TwoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pop();
+            if (Navigator.of(context).canPop()) {
+              Navigator.of(context).pop("Retorno");
+            }
           },
           child: const Text("Voltar para página um"),
         ),
