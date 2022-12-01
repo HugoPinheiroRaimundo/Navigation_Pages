@@ -11,6 +11,7 @@ class OnePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
+            //pushReplaceNamed não dá possibilidade do user voltar para tela anterior.
             Navigator.of(context).pushNamed("/twoPage"); // Rotas nomeadas /
             //  Navigator.of(context).push( // navegação padrão
             //  MaterialPageRoute(builder: (context) => const TwoPage()),
